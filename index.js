@@ -7,7 +7,7 @@ const dns = require("node:dns/promises")
 const pokerouter=require('./routes/pokemonrouter')
 const userrouter=require('./routes/userroute')
 const formrouter=require('./routes/formrouter')
-
+const bulkemailrouter=require('./routes/bulkmailsrouter')
 
 dns.setServers(["8.8.8.8","1.1.1.1"])
 app.use(express.json())
@@ -19,6 +19,7 @@ app.get('/',(req,res)=>{
 
 app.use('/',pokerouter)
 app.use('/',formrouter)
+app.use('/',bulkemailrouter)
 
 app.listen(3000,()=>{
     console.log('Server is running')
