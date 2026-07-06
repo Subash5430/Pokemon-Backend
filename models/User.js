@@ -8,7 +8,7 @@ const User=mongoose.Schema({
     mail:{
         type:String,
         required:true
-    },
+    }, 
     password:{
         type:String,
         required:true
